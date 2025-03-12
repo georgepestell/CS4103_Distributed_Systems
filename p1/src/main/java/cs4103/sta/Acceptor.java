@@ -5,7 +5,7 @@ public class Acceptor extends PaxosProcess {
     // The highest ballot number that the acceptor has seen
     // All real ballot numbers are positve integers
     private int maxBallotId = -1;
-    private String acceptedvalue = null;
+    private String acceptedValue = null;
 
     public Acceptor() {
         this.processType = "Acceptor";
@@ -31,7 +31,7 @@ public class Acceptor extends PaxosProcess {
                         this.maxBallotId = msg.getBallotId();
 
                         // Send acknowledge message including the highest accepted value if any
-                        if (this.acceptedvalue != null) {
+                        if (this.acceptedValue != null) {
                             MessagePool.send(new Message(this.getProcessId(), msg.getFrom(), Message.MessageType.acknowledge, msg.getBallotId(), this.acceptedvalue));
                         } else {
                             MessagePool.send(new Message(this.getProcessId(), msg.getFrom(), Message.MessageType.acknowledge, msg.getBallotId()));
@@ -40,6 +40,11 @@ public class Acceptor extends PaxosProcess {
                     } else {
                         // Ignore the message if the ballot number is not greater than previous ones
                     }
+                };
+                break;
+                case accept: {
+                    // Accept the value
+                    this.acceptedValue = msg.getConsensusValue();
                 };
                 break;
                 default: {
