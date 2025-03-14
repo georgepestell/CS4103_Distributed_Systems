@@ -1,10 +1,10 @@
-package cs4103.sta;
+package uk.ac.standrews.rchc.paxos_practical;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class App {
+public class    Main {
     private static final Random rand = new Random();
 
     public static void main(String[] args) throws Exception {

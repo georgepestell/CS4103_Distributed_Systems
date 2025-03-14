@@ -1,4 +1,4 @@
-package cs4103.sta;
+package uk.ac.standrews.rchc.paxos_practical;
 
 import java.util.List;
 
@@ -20,11 +20,9 @@ public class Learner extends PaxosProcess {
             switch (messageType) {
                 case dummy: {
 
+
                 }
                 ;
-                case accept: {
-                    
-                }
                 break;
 
                 default: {

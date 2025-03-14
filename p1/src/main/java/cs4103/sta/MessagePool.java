@@ -1,4 +1,4 @@
-package cs4103.sta;
+package uk.ac.standrews.rchc.paxos_practical;
 
 import java.util.Collections;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package cs4103.sta;
+package uk.ac.standrews.rchc.paxos_practical;
 
 import java.util.ArrayList;
 import java.util.List;

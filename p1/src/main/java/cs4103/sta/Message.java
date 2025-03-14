@@ -1,4 +1,4 @@
-package cs4103.sta;
+package uk.ac.standrews.rchc.paxos_practical;
 
 public class Message {
     private final int from;
